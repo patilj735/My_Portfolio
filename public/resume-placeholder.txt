@@ -1,0 +1,2 @@
+Replace this file with your real resume.
+Save it as public/resume.pdf so the Download Resume button works.

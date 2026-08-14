@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+
+build/
+
+public/HospSys.mp4
+public/BMShow_video.mp4
+public/Postman_Certification.png
+public/resume.pdf   
+public/Janhavi_Patil_JLPT_N5_Certificate.pdf

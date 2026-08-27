@@ -1,35 +1,84 @@
 import { useState } from 'react'
-import { Mail, Github, Linkedin, MapPin, Download, Send, Check } from 'lucide-react'
+
+import {
+  Mail,
+  Github,
+  Linkedin,
+  MapPin,
+  Download,
+  Send,
+  Check,
+} from 'lucide-react'
+
 import { profile } from '../data/portfolio.js'
+
 import SectionHeading from './ui/SectionHeading.jsx'
 import GlowCard from './ui/GlowCard.jsx'
 import Reveal from './ui/Reveal.jsx'
 import MagneticButton from './ui/MagneticButton.jsx'
 
+const initialForm = {
+  name: '',
+  email: '',
+  message: '',
+}
+
 const contactLinks = [
-  { icon: Mail, label: profile.email, href: `mailto:${profile.email}` },
-  { icon: Github, label: 'GitHub', href: profile.socials.github },
-  { icon: Linkedin, label: 'LinkedIn', href: profile.socials.linkedin },
-  { icon: MapPin, label: profile.location, href: null },
+  {
+    icon: Mail,
+    label: profile.email,
+    href: `mailto:${profile.email}`,
+  },
+  {
+    icon: Github,
+    label: 'GitHub',
+    href: profile.socials.github,
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    href: profile.socials.linkedin,
+  },
+  {
+    icon: MapPin,
+    label: profile.location,
+    href: null,
+  },
 ]
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle') // idle | sending | sent
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle')
+  const [form, setForm] = useState(initialForm)
 
   function handleChange(e) {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
+    const { name, value } = e.target
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }))
   }
 
   function handleSubmit(e) {
     e.preventDefault()
+
     setStatus('sending')
-    // Wire this up to your form handler of choice (Formspree, Resend, an API route, etc).
-    setTimeout(() => setStatus('sent'), 900)
+
+    setTimeout(() => {
+      setForm(initialForm)
+      setStatus('sent')
+
+      setTimeout(() => {
+        setStatus('idle')
+      }, 2000)
+    }, 900)
   }
 
   return (
-    <section id="contact" className="relative mx-auto max-w-6xl px-6 py-28">
+    <section
+      id="contact"
+      className="relative mx-auto max-w-6xl px-6 py-28"
+    >
       <SectionHeading
         eyebrow="Contact"
         title="Let's build something"
@@ -84,6 +133,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <label className="flex flex-col gap-2 text-sm text-ink-secondary">
                   Name
+
                   <input
                     required
                     name="name"
@@ -93,8 +143,10 @@ export default function Contact() {
                     className="rounded-xl border border-base-border bg-base-raised/40 px-4 py-3 text-sm text-ink-primary placeholder:text-ink-muted focus:border-accent-violet/50 focus:outline-none"
                   />
                 </label>
+
                 <label className="flex flex-col gap-2 text-sm text-ink-secondary">
                   Email
+
                   <input
                     required
                     type="email"
@@ -106,8 +158,10 @@ export default function Contact() {
                   />
                 </label>
               </div>
+
               <label className="flex flex-col gap-2 text-sm text-ink-secondary">
                 Message
+
                 <textarea
                   required
                   name="message"
@@ -130,7 +184,9 @@ export default function Contact() {
                     <Send size={15} />
                   </>
                 )}
+
                 {status === 'sending' && 'Sending…'}
+
                 {status === 'sent' && (
                   <>
                     Message sent

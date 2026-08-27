@@ -111,6 +111,7 @@ export const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB", "REST API"],
     github: "https://github.com/patilj735/Zerodha-clone",
     demo: "https://zerodha-frontend-b541.onrender.com",
+    image: "/projects/zerodha.png",
     metrics: [
       { label: "Dashboard modules", value: "5+" },
       { label: "Core trading features", value: "Watchlist, Orders, Holdings" },
@@ -137,6 +138,7 @@ export const projects = [
     github:
       "https://github.com/patilj735/MeetMatrix-Modern_Video_Meeting_Platform",
     demo: "https://meetmatrix-frontend.onrender.com",
+    image: "/projects/meetmatrix.png",
     metrics: [
       { label: "Summary generation time", value: "<20s" },
       { label: "Concurrent call capacity", value: "50 rooms" },
@@ -171,7 +173,8 @@ export const projects = [
       "Local Storage / Session Storage",
     ],
     github: "https://github.com/patilj735/voicenest",
-    demo: "https://voicenest.vercel.app",
+    // demo: "https://voicenest.vercel.app",
+    image: "/projects/voicenest.png",
     metrics: [{ label: "Voice-based search flow", value: "Conversational AI" }],
 
     architecture:
@@ -203,6 +206,7 @@ export const projects = [
     github: "https://github.com/patilj735/CloudMart",
 
     // demo: "https://your-demo-link.vercel.app",
+    image: "/projects/cloudmart.png",
 
     metrics: [
       { label: "User roles supported", value: "2" },
@@ -246,6 +250,8 @@ export const projects = [
     ],
 
     github: "https://github.com/patilj735/LostLink-Smart_Lost_and_Found_Portal",
+
+    image: "/projects/lostlink.png",
 
     metrics: [
       { label: "AWS services integrated", value: "6+" },
@@ -291,6 +297,8 @@ export const projects = [
 
     demo: "https://wanderlust-rzpu.onrender.com/",
 
+    image: "/projects/wanderlust.png",
+
     metrics: [
       { label: "Page load time", value: "<2s" },
       { label: "Image upload time", value: "<3s" },
@@ -326,6 +334,9 @@ export const projects = [
     github: "https://github.com/patilj735/Book-My-Show",
 
     demo: "https://drive.google.com/file/d/1o8wgqdJgwa2i0z4esVpNN55p4TIgeK59/view?usp=drive_link",
+
+    image: "/projects/bms.png",
+
     metrics: [
       { label: "Booking workflow steps", value: "4" },
       { label: "GUI screens implemented", value: "6+" },
@@ -361,6 +372,8 @@ export const projects = [
     github: "https://github.com/yourusername/hospital-management-system",
 
     demo: "https://drive.google.com/file/d/1dP1vnQ3vW5lX6goAc1tQ3Zk_LIZEDO_H/view?usp=drive_link",
+
+    image: "/projects/hospmanage.png",
 
     metrics: [
       { label: "Patient search response time", value: "<200ms" },

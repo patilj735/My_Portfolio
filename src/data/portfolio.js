@@ -5,7 +5,8 @@ export const profile = {
     "I build fast, scalable products at the intersection of the web and AI — from pixel to pipeline.",
   location: "Shirpur, India",
   email: "janhavipatil7305@gmail.com",
-  resumeUrl: "https://drive.google.com/file/d/1fHF6-pHRb1tgQpM2k8jIzxjtwbMMLWhw/view?usp=drive_link",
+  resumeUrl:
+    "https://drive.google.com/file/d/1fHF6-pHRb1tgQpM2k8jIzxjtwbMMLWhw/view?usp=drive_link",
   socials: {
     github: "https://github.com/patilj735",
     linkedin: "https://linkedin.com/in/janhavi-patil-1348a22bb",
@@ -55,11 +56,11 @@ export const about = {
 export const skills = [
   {
     category: "Frontend",
-    items: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    items: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Next.js", "EJS", "Bootstrap"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "REST APIs", "WebSockets"],
+    items: ["Node.js", "Express", "REST APIs", "WebSockets", "ASP.NET"],
   },
   {
     category: "Cloud",
@@ -127,6 +128,46 @@ export const projects = [
     challenges:
       "Designing a responsive trading dashboard and maintaining consistent portfolio and order state across multiple user interactions using the MERN stack.",
   },
+  {
+    id: "habitmind-ai",
+
+    name: "HabitMind AI",
+
+    tagline: "AI-powered habit tracking and personal consistency platform",
+
+    description:
+      "A full-stack habit tracking platform where users can manage habits, track completion and streaks, visualize 90-day progress, and receive personalized AI-powered insights and recommendations.",
+
+    categories: ["Full Stack", "AI"],
+
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Gemini API"],
+
+    github: "https://github.com/patilj735/HabitMind-AI",
+
+    demo: "https://habitmind-ai.onrender.com",
+
+    image: "/projects/habitmind-ai.png",
+
+    metrics: [
+      { label: "AI response time", value: "< 3s" },
+      { label: "Habit Tracking period", value: "90-day" },
+      { label: "Habit tracking", value: "Daily" },
+    ],
+
+    architecture:
+      "Built with a React.js frontend and Node.js/Express.js backend using MongoDB for persistent user, habit, and completion data. Gemini AI powers personalized analysis and recommendations through dedicated backend workflows.",
+
+    features: [
+      "Habit creation and completion tracking",
+      "Streak tracking and 90-day consistency heatmaps",
+      "Personalized AI habit recommendations",
+      "AI weekly reports and streak recovery plans",
+    ],
+
+    challenges:
+      "Implementing reliable habit analytics and streak calculations while integrating AI-powered features with fallback handling for unavailable AI responses.",
+  },
+
   {
     id: "meetmatrix",
     name: "MeetMatrix",
@@ -400,7 +441,8 @@ export const certifications = [
     name: "Postman API Fundamentals",
     issuer: "Postman",
     date: "2024",
-    verifyUrl: "https://drive.google.com/file/d/1G8vES0coDh0Alp3UUGLraedjnAtx2m9S/view?usp=drive_link",
+    verifyUrl:
+      "https://drive.google.com/file/d/1G8vES0coDh0Alp3UUGLraedjnAtx2m9S/view?usp=drive_link",
   },
 
   {
@@ -409,11 +451,12 @@ export const certifications = [
     date: "2024",
     verifyUrl: "https://nextechinfosystems.com/verify/A2931465",
   },
-  
+
   {
     name: "JLPT N5 Certification",
     issuer: "Japan Foundation",
     date: "2025",
-    verifyUrl: "https://drive.google.com/file/d/1X2SHT7tI6uoP2ybQ2EpftiF-W2NHXwHH/view?usp=drive_link",
+    verifyUrl:
+      "https://drive.google.com/file/d/1X2SHT7tI6uoP2ybQ2EpftiF-W2NHXwHH/view?usp=drive_link",
   },
 ];
